@@ -12,7 +12,7 @@ contract Color is ERC721 {
     constructor() ERC721("Color", "COLOR") {
     }
 
-    function mint(string memory _color) public {
+    function _mint(string memory _color) public {
         // Require unique Color -- reading the value out of the mapping
         require(!_colorsExist[_color]);
         // Color - add it
